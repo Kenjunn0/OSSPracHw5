@@ -7,9 +7,12 @@ let input = [];
 
 rl.question("이름을 입력하세요:", (ans) => {
     input.push(ans);
-    rl.question("학번을 입력하세요.", (ans) => {
+    rl.question("학번을 입력하세요:", (ans) => {
         input.push(ans);
-        rl.close();
+        rl.question("학과를 입력하세요:", (ans) => {
+            input.push(ans);
+            rl.close();
+        });
     });
 });
 
